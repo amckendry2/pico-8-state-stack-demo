@@ -163,9 +163,8 @@ function game_moving_state()
     return {
         enter = function(obj) end,
         update = function(obj)
-            if player_state_stack:has_states() then
-                player_state_stack:update(player)
-            else    
+            player_state_stack:update(player)
+            if not player_state_stack:has_states() then    
                 game_state_stack:pop()
             end
         end,
