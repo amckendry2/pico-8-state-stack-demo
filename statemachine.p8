@@ -124,7 +124,7 @@ function game_planning_state()
                 if (btnp(1)) add_move(4, 20, 1, 0)
             end
             if (btnp(4)) then
-                move_queue = {}
+                move_draw_queue = {}
                 player_state_stack:clear()
             end
             if btnp(5) and player_state_stack:has_states() then
